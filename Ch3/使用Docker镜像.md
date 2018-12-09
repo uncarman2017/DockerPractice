@@ -71,14 +71,14 @@
 docker commit -m "Max Yu's hello world" -a "helloworld clone" **b12477af9471** uncarman/helloworld
  
 ### 2. 基于本地模板导入
-docker import [Docker Repositary And Tag]
-说明：[Docker Tag]这个参数输入镜像仓库名和标签 
+docker import [Full Image Name]
+说明：[Full Image Name]这个参数完整的镜像名称，即仓库名/镜像名:标签,比如docker.io/willdurand/elk:latest,仓库名省略时则使用当前仓库. 
 
 ### 3. 基于Dockerfile创建
 docker build -t python:3
 
 ## 保存和载入镜像指令
-docker save -o [文件路径] [Docker Repositary And Tag] <br/>
+docker save -o [文件路径] [Full Image Name] <br/>
 说明: 导出镜像至指定文件路径下
 例子: docker save -o /usr/local/willdurand_elk_latest.tar docker.io/willdurand/elk:latest
 
@@ -86,7 +86,7 @@ docker load -i [文件路径]
 说明: 导入指定文件路径下的镜像
 
 ## 上传镜像
-docker push [Docker Repositary And Tag] <br/>
+docker push [Full Image Name] <br/>
 说明：上传镜像文件到DockerHub
 
 ## 帮助

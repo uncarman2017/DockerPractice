@@ -6,5 +6,11 @@ docker run -d -p 5000:5000 -v /home/data/registry:/var/lib/registry registry:2.6
   {
     "insecure-registries":["172.16.100.110:5000"]
   }
-  
+ 
+> 国内镜像加速器配置
+> 修改docker配置文件: vim /etc/docker/daemon.json
+  {
+    "registry-mirrors":["https://1234abcd.mirror.aliyuncs.com"]
+  }
+
 

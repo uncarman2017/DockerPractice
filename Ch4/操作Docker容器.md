@@ -1,7 +1,7 @@
 ## 4.1 创建容器
 
 ### 1. docker create
-docker create -it [docker仓库:标签] 
+docker create -it [镜像名:标签] 
 > 说明: 从镜像创建容器，创建的容器处于停止状态 <br/>
 > 选项: 比较多，可参考书籍上的说明。分为以下三类：
 > * 与容器运行模式相关的选项
@@ -12,21 +12,21 @@ docker create -it [docker仓库:标签]
 >> * --label-file=[]: 从文件中读取标签信息
 
 ### 2. docker start
-docker start [docker仓库:标签]
+docker start [镜像名:标签]
 > 说明: 启动一个容器 <br/>
 
-docker restart [docker仓库:标签]
+docker restart [镜像名:标签]
 > 说明: 重启一个容器 <br/>
 
 
 ### 3. docker run
-docker run -it [docker仓库:标签] /bin/bash
+docker run -it [镜像名:标签] /bin/bash
 > 说明: 新建并启动一个容器,创建一个伪终端执行指令 <br/>
 
-docker run -d [docker仓库:标签]
+docker run -d [镜像名:标签]
 > 说明: 在后台新建并启动一个容器 <br/>
 
-docker container wait [docker仓库:标签]
+docker container wait [镜像名:标签]
 > 说明：等待容器退出，并打印退出返回结果 <br/>
 
  
@@ -85,7 +85,7 @@ docker container export -o="[文件路径]" [容器ID]
 
 
 ### 2. docker container import / load
-docker container import [ddocker镜像备份文件路径(*.tar)] - [docker仓库:标签]
+docker container import [ddocker镜像备份文件路径(*.tar)] - [镜像名:标签]
 docker container import /usr/local/docker/test_for_run.tar - test/ubuntu:v1.0
 > 说明: 导入容器快照成新的镜像 <br/>
 > 选项:
