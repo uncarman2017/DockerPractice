@@ -12,10 +12,10 @@ docker create -it [镜像名:标签]
 >> * --label-file=[]: 从文件中读取标签信息
 
 ### 2. docker start
-docker start [镜像名:标签]
+docker start [容器ID]
 > 说明: 启动一个容器 <br/>
 
-docker restart [镜像名:标签]
+docker restart [容器ID]
 > 说明: 重启一个容器 <br/>
 
 
@@ -26,7 +26,7 @@ docker run -it [镜像名:标签] /bin/bash
 docker run -d [镜像名:标签]
 > 说明: 在后台新建并启动一个容器 <br/>
 
-docker container wait [镜像名:标签]
+docker container wait [容器ID]
 > 说明：等待容器退出，并打印退出返回结果 <br/>
 
  
