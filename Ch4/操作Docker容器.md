@@ -110,7 +110,17 @@ docker load [docker镜像备份文件路径(*.tar)]
 -no-stream: 不持续输出，默认会自动更新持续实时结果;
 -no-trunc: 不截断输出信息。
 
-## 4.7 其他容器命令
+## 4.7 保存容器内容
+### docker commit [OPTIONS] CONTAINER [仓库名:标签]
+> 说明: 从一个容器创建镜像
+> 选项:
+-a :提交的镜像作者；
+-c :使用Dockerfile指令来创建镜像；
+-m :提交时的说明文字；
+-p :在commit时，将容器暂停。
+> 例子: docker commit afcaf46e8305 centos-vim
+
+## 4.8 其他容器命令
 ### docker container cp [容器ID]:[原文件路径] [目标文件路径] 
 docker container cp data test:/tmp/
 > 说明: 本机和容器之间复制文件
@@ -126,6 +136,8 @@ docker container port test
 ### docker container update
 docker update --cpu-quota 1000000 test
 > 说明: 更新容器的一些运行时配置，主要是一些资源限制份额
+
+
 
 
 
